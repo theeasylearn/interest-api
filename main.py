@@ -2,7 +2,7 @@ from fastapi import FastAPI, Query
 app = FastAPI(title="Simple Interest API")
 @app.get("/")
 def home():
-    return {"message": "Interest API is running"}
+    return {"message": "Interest API is running. Developed By : Ankit Patel"}
 
 @app.get("/getInterest")
 def getInterest(
@@ -18,3 +18,4 @@ def getInterest(
         "simple_interest": round(interest, 2)
     }
 # http://127.0.0.1:8000/getInterest?amount=10000&rate=5&year=2
+# https://interest-api-sjxd.onrender.com/getInterest?amount=25000&rate=11&year=5
